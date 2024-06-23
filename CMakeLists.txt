@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(dummy_lib)
+project(dummy)
 
 set(CMAKE_CXX_STANDARD 17)
 
