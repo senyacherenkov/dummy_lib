@@ -4,9 +4,11 @@ project(dummy_lib)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_MODULE_PATH "${CMAKE_BINARY_DIR};${CMAKE_MODULE_PATH}")
 
+include_directories(.)
+
 add_library(${PROJECT_NAME} STATIC)
 
 target_sources(${PROJECT_NAME}
     PRIVATE
-        main.cpp
+        dummy.cpp
 )
