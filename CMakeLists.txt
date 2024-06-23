@@ -7,6 +7,6 @@ add_library(${PROJECT_NAME} src/dummy.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
-set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "include/dummy.hpp")
+set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "include/dummy.h")
 
 install(TARGETS ${PROJECT_NAME} PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
