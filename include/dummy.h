@@ -1,5 +1,6 @@
 #pragma once
+#include <iostream>
 
 struct Dummy {
-  static void print();
+  void print() {std::cout << "Hi! I'm dummy!\n";}
 };
