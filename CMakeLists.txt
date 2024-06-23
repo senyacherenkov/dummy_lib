@@ -3,7 +3,7 @@ project(dummy_lib)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(${PROJECT_NAME} dummy.cpp)
+add_library(${PROJECT_NAME} src/dummy.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
