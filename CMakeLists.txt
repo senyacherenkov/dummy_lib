@@ -2,13 +2,11 @@ cmake_minimum_required(VERSION 3.5)
 project(dummy_lib)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_MODULE_PATH "${CMAKE_BINARY_DIR};${CMAKE_MODULE_PATH}")
 
-include_directories(.)
+add_library(${PROJECT_NAME} dummy.cpp)
 
-add_library(${PROJECT_NAME} STATIC)
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 
-target_sources(${PROJECT_NAME}
-    PRIVATE
-        dummy.cpp
-)
+set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "include/dummy.hpp")
+
+install(TARGETS ${PROJECT_NAME} PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
