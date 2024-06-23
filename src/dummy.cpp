@@ -1,4 +1,4 @@
-#include "dummy.hpp"
+#include "dummy.h"
 #include <iostream>
 
 void Dummy::print() {
